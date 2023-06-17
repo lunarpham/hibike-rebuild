@@ -9,13 +9,15 @@ window.addEventListener('DOMContentLoaded', event => {
             return;
         }
         if (window.scrollY === 0) {
-            navbarCollapsible.classList.remove('navbar-shrink')
+            navbarCollapsible.classList.remove('navbar-shrink');
+            navbarCollapsible.classList.remove('shadow')
         } else {
-            navbarCollapsible.classList.add('navbar-shrink')
+            navbarCollapsible.classList.add('navbar-shrink');
+            navbarCollapsible.classList.add('shadow')
         }
 
     };
-
+    
     // Shrink the navbar 
     navbarShrink();
 
@@ -44,4 +46,9 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+
 });
+
+$(function(){
+    $("#mainNav").load("../navbar.html");
+  });

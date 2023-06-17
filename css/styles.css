@@ -1,195 +1,350 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 
 * {
-    font-family: "Viga", "PT Sans";
-    color: #444444;
+    font-family: "Outfit","Passion One";
+    color: #5c5c5c;
+    font-weight: 300;
+}
+
+body {
+  background-color: #D9D9D9;
+}
+
+.card-text {
+    font-weight: 300;
+}
+
+.text-azure {
+  color: #48999F;
+}
+
+.text-pink {
+  color: #E14A77;
+}
+
+.text-gray-50 {
+  color: #00000071;
 }
 
 html {
     scroll-padding-top: calc(4.5rem - 1px);
-  }
-  
-  body {
-    letter-spacing: 0.0625em;
-  }
-  
+}
+
+body {
+  letter-spacing: 0.0625em;
+}
+
+#mainNav {
+  min-height: 3.5rem;
+  background-color: #fff;
+}
+#mainNav .navbar-toggler {
+  font-size: 80%;
+  padding: 0.75rem;
+  color: #64a19d;
+  border: 1px solid #64a19d;
+}
+#mainNav .navbar-toggler:focus {
+  outline: none;
+}
+#mainNav .navbar-brand {
+  font-weight: 700;
+  padding: 0.9rem 0;
+}
+#mainNav .navbar-nav .nav-item:hover {
+  color: fade(#fff, 80%);
+  outline: none;
+  background-color: transparent;
+}
+#mainNav .navbar-nav .nav-item:active, #mainNav .navbar-nav .nav-item:focus {
+  outline: none;
+  background-color: transparent;
+}
+@media (min-width: 992px) {
   #mainNav {
-    min-height: 3.5rem;
-    background-color: #fff;
-  }
-  #mainNav .navbar-toggler {
-    font-size: 80%;
-    padding: 0.75rem;
-    color: #64a19d;
-    border: 1px solid #64a19d;
-  }
-  #mainNav .navbar-toggler:focus {
-    outline: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out;
   }
   #mainNav .navbar-brand {
-    font-weight: 700;
-    padding: 0.9rem 0;
+    padding: 0rem 0.5rem;
+    font-size: 150%;
+    color: rgba(255, 255, 255, 0.5);
   }
-  #mainNav .navbar-nav .nav-item:hover {
-    color: fade(#fff, 80%);
-    outline: none;
-    background-color: transparent;
-  }
-  #mainNav .navbar-nav .nav-item:active, #mainNav .navbar-nav .nav-item:focus {
-    outline: none;
-    background-color: transparent;
-  }
-  @media (min-width: 992px) {
-    #mainNav {
-      padding-top: 0;
-      padding-bottom: 0;
-      border-bottom: none;
-      background-color: transparent;
-      transition: background-color 0.3s ease-in-out;
-    }
-    #mainNav .navbar-brand {
-      padding: 0.5rem 0;
-      color: rgba(255, 255, 255, 0.5);
-    }
-    #mainNav .nav-link {
-      transition: none;
-      padding: 2rem 1.5rem;
-      color: rgba(255, 255, 255, 0.5);
-    }
-    #mainNav .nav-link:hover {
-      color: rgba(255, 255, 255, 0.75);
-    }
-    #mainNav .nav-link:active {
-      color: #fff;
-    }
-    #mainNav.navbar-shrink {
-      background-color: #fff;
-    }
-    #mainNav.navbar-shrink .navbar-brand {
-      color: rgb(248, 117, 150);
-    }
-    #mainNav.navbar-shrink .nav-link {
-      color: #444;
-      padding: 1.5rem 1.5rem 1.25rem;
-      border-bottom: 0.25rem solid transparent;
-    }
-    #mainNav.navbar-shrink .nav-link:hover {
-      color: #64a19d;
-    }
-    #mainNav.navbar-shrink .nav-link:active {
-      color: #467370;
-    }
-    #mainNav.navbar-shrink .nav-link.active {
-      color: #64a19d;
-      outline: none;
-      border-bottom: 0.25rem solid #64a19d;
-    }
+  #mainNav .nav-link {
+    transition: none;
+    padding: 2rem 1.5rem;
+    color: rgba(255, 255, 255, 0.5);
   }
 
-  .btn {
-    box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
-    padding: 1.25rem 2rem;
-    font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    font-size: 80%;
-    text-transform: uppercase;
-    border: 0;
+  #mainNav .material-icons {
+    color: rgba(255, 255, 255, 0.5);
+    padding: 0.5rem
   }
-  
+
+  #mainNav .nav-link:hover {
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  #mainNav.navbar-shrink {
+    background-color: #fff;
+  }
+  #mainNav.navbar-shrink .navbar-brand {
+    font-size: 130%;
+    color: rgb(248, 117, 150);
+  }
+  #mainNav.navbar-shrink .nav-link {
+    color: #444;
+    padding: 1.5rem 1.5rem 1.25rem;
+    border-bottom: 0.25rem solid transparent;
+  }
+
+  #mainNav.navbar-shrink .material-icons {
+    color: #444;
+  }
+
+  #mainNav.navbar-shrink .nav-link:hover {
+    color: #ffffff;
+    background-color: #48999F;
+  }
+
+  #mainNav.navbar-shrink .nav-link:active {
+    color: #ffffff;
+    background-color: #48999F;
+  }
+}
+
+.btn {
+  box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
+  padding: 1.25rem 2rem;
+  font-size: 80%;
+  text-transform: uppercase;
+  border: 0;
+}
+
+.masthead {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 30rem;
+  padding: 15rem 0;
+  background: linear-gradient(to bottom, rgba(65, 208, 208, 0.1) 5%, rgba(248, 117, 150, 0.5) 70%, rgba(248, 117, 150)), url("../assests/miku.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+.masthead h1, .masthead .h1 {
+  font-family: "Viga";
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.8rem;
+  background: linear-gradient(rgba(255, 255, 255), rgba(65, 208, 255, 0.0));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+.masthead h2, .masthead .h2 {
+  max-width: 20rem;
+  font-size: 1rem;
+}
+
+.text-center {
+  padding-top: 15rem;
+}
+
+@media (min-width: 768px) {
+  .masthead h1, .masthead .h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+}
+@media (min-width: 992px) {
   .masthead {
-    position: relative;
-    width: 100%;
-    height: auto;
-    min-height: 30rem;
-    padding: 15rem 0;
-    background: linear-gradient(to bottom, rgba(65, 208, 208, 0.1) 5%, rgba(248, 117, 150, 0.5) 70%, rgba(248, 117, 150)), url("../assests/miku.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-size: cover;
+    height: 100vh;
+    padding: 0;
   }
   .masthead h1, .masthead .h1 {
-    font-family: "Viga";
-    font-size: 2.5rem;
-    line-height: 2.5rem;
+    font-size: 6.5rem;
+    line-height: 6.5rem;
     letter-spacing: 0.8rem;
-    background: linear-gradient(rgba(255, 255, 255), rgba(65, 208, 255, 0.0));
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-            background-clip: text;
   }
   .masthead h2, .masthead .h2 {
-    max-width: 20rem;
+    max-width: 30rem;
+    font-size: 1.25rem;
+  }
+}
+
+#carousel-introduction{
+  width: 100%;
+  height: 40rem;
+  background-image: linear-gradient(to bottom, rgb(248, 117, 150) 1%, rgba(248, 117, 150, 0.5) 35%, rgb(95, 223, 255)), url("../assests/kaori.jpg");
+  background-position:top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.carousel-label {
+  padding: 10rem 0rem 1rem 10rem
+}
+
+.carousel-item {
+  padding: 0 10rem;
+}
+
+.carousel-item h5 {
+  width: 70%;
+}
+
+@media (max-width: 992px) {
+  .text-white {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+  }
+}
+
+@media (max-width: 992px) {
+
+  .carousel-label {
+    display: flex;
+    justify-content: center;
+    padding: 10rem 0rem 1rem 0rem
+  }
+
+  .carousel-item {
+    text-align: center;
+    padding: 0 2.2rem
+  }
+
+  .carousel-item h5 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  #carousel-introduction {
+    background-position: right;
+  }
+}
+
+@media (max-width: 414px) {
+
+  .carousel-label {
+    display: flex;
+    justify-content: center;
+    padding: 5rem 0rem 1rem 0rem
+  }
+
+  #carousel-introduction {
+    height: 30rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .carousel-item h5 {
     font-size: 1rem;
   }
 
-  .text-center {
-    padding-top: 15rem;
-  }
+}
 
-  @media (min-width: 768px) {
-    .masthead h1, .masthead .h1 {
-      font-size: 4rem;
-      line-height: 4rem;
-    }
-  }
-  @media (min-width: 992px) {
-    .masthead {
-      height: 100vh;
-      padding: 0;
-    }
-    .masthead h1, .masthead .h1 {
-      font-size: 6.5rem;
-      line-height: 6.5rem;
-      letter-spacing: 0.8rem;
-    }
-    .masthead h2, .masthead .h2 {
-      max-width: 30rem;
-      font-size: 1.25rem;
-    }
-  }
+.divider-bottom {
+  justify-content: center;
+  background-color: rgb(248, 117, 150);
+  width:5%;
+  height: 2px;
+}
 
-  #carousel-introduction{
-    width: 100%;
-    height: 40rem;
-    background-image: linear-gradient(to bottom, rgb(248, 117, 150) 1%, rgba(248, 117, 150, 0.5) 35%, rgb(95, 223, 255)), url("../assests/kaori.jpg");
-    background-position:top;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+#anime-banner {
+  height: 30rem;
+  background-image: url('../collections/banner.jpg');
+  background-size:cover;
+  background-position: center;
+  text-align: start;
+}
 
+#anime-banner .text-right {
+  width: 100%;
+  padding: 4rem 2rem 0rem 60%;
+  font-size: 4rem;
+  line-height: 4rem;
+  font-weight: 600;
+  color:rgb(53, 53, 53);
+}
 
-  .carousel-label {
-    margin: 13rem 0rem 0rem 0;
-  }
+#arrow-right {
+  padding-left: 0.3rem;
+  transition: all 0.5s;
+}
+
+.btn:hover #arrow-right {
+  transform: translateX(0.3rem);
+}
+
+#service-card {
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+#service-card:hover {
+  transform: scale(1.1);
+}
+
+#product-card .brand-name {
+  padding: 0;
+  margin: 0
+}
+
+#product-card .product-name {
+  height: 3.3rem;
+}
+
+#product-card .product-type {
+  background-color: #777777;
+  width: fit-content;
+  padding: 0rem 1rem;
+}
+
+#product-card .product-price {
+  color: #444444;
+}
+
+#product-card .buy-now {
+  width: 100%;
+}
+
+.footer {
+  padding: 5rem 0;
+}
+
+#products .container-fluid .product-box, #products .container-sm .product-box, #products .container-md .product-box, #products .container-lg .product-box, #products .container-xl .product-box, #products .container-xxl .product-box {
+  position: relative;
+  display: block;
+}
+#products .container-fluid .product-box .product-box-caption, #products .container-sm .product-box .product-box-caption, #products .container-md .product-box .product-box-caption, #products .container-lg .product-box .product-box-caption, #products .container-xl .product-box .product-box-caption, #products .container-xxl .product-box .product-box-caption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  opacity: 0;
+  color: #fff;
+  background: rgba(248, 117, 150, 0.767);
+  transition: opacity 0.25s ease;
+  text-align: center;
+}
+
+#products .container-fluid .product-box .product-box-caption .type-name, #products .container-sm .product-box .product-box-caption .type-name, #products .container-md .product-box .product-box-caption .type-name, #products .container-lg .product-box .product-box-caption .type-name, #products .container-xl .product-box .product-box-caption .type-name, #products .container-xxl .product-box .product-box-caption .type-name {
+  font-size: 1.2rem;
+}
+#products .container-fluid .product-box:hover .product-box-caption, #products .container-sm .product-box:hover .product-box-caption, #products .container-md .product-box:hover .product-box-caption, #products .container-lg .product-box:hover .product-box-caption, #products .container-xl .product-box:hover .product-box-caption, #products .container-xxl .product-box:hover .product-box-caption {
+  opacity: 1;
+}
+
   
-  .text-black-50 {
-    width: 45%;
-  }
-
-  @media (max-width: 992px) {
-    .text-white {
-      display: flex;
-      justify-content: center;
-      width: 80%;
-    }
-  }
-
-  #sponsor-logos {
-    padding-top: 10rem;
-    padding-bottom: 0;
-  }
-
-  .divider-bottom {
-    justify-content: center;
-    background-color: rgb(248, 117, 150);
-    width:5%;
-    height: 2px;
-  }
-
-  .card-text {
-    font-family: "PT Sans";
-  }
-
-  .footer {
-    padding: 5rem 0;
-  }
