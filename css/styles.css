@@ -60,6 +60,7 @@ body {
   outline: none;
   background-color: transparent;
 }
+
 @media (min-width: 992px) {
   #mainNav {
     padding-top: 0;
@@ -68,6 +69,11 @@ body {
     background-color: transparent;
     transition: background-color 0.3s ease-in-out;
   }
+
+  #mainNav.nav-white {
+    color:#000000
+  }
+
   #mainNav .navbar-brand {
     padding: 0rem 0.5rem;
     font-size: 150%;
@@ -91,6 +97,7 @@ body {
   #mainNav.navbar-shrink {
     background-color: #fff;
   }
+
   #mainNav.navbar-shrink .navbar-brand {
     font-size: 130%;
     color: rgb(248, 117, 150);
@@ -274,6 +281,10 @@ body {
   color:rgb(53, 53, 53);
 }
 
+#anime-banner .btn {
+  margin: 0rem 2rem 0rem 60%;
+}
+
 #arrow-right {
   padding-left: 0.3rem;
   transition: all 0.5s;
@@ -292,26 +303,26 @@ body {
   transform: scale(1.1);
 }
 
-#product-card .brand-name {
+.product-card .brand-name {
   padding: 0;
   margin: 0
 }
 
-#product-card .product-name {
+.product-card .product-name {
   height: 3.3rem;
 }
 
-#product-card .product-type {
+.product-card .product-type {
   background-color: #777777;
   width: fit-content;
   padding: 0rem 1rem;
 }
 
-#product-card .product-price {
+.product-card .product-price {
   color: #444444;
 }
 
-#product-card .buy-now {
+.product-card .buy-now {
   width: 100%;
 }
 

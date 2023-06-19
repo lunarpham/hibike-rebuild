@@ -9,4 +9,3 @@ $result = $conn->query($sql);
 $mysqli->close();
 
 ?>
-
