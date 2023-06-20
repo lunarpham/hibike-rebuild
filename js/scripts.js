@@ -7,14 +7,13 @@ window.addEventListener('DOMContentLoaded', event => {
     // Navbar shrink function
     var navbarShrink = function () {
         const navbarCollapsible = document.body.querySelector('#mainNav');
-        const navbarDefaultWhite = document.body.querySelector('.navbar-white');
         if (!navbarCollapsible) {
             return;
         }
         if (window.scrollY === 0) {
             navbarCollapsible.classList.remove('navbar-shrink');
             navbarCollapsible.classList.remove('shadow');
-            navbarDefaultWhite.classList.add('navbar-shrink');
+
         } else {
             navbarCollapsible.classList.add('navbar-shrink');
             navbarCollapsible.classList.add('shadow')

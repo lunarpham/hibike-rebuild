@@ -5,11 +5,6 @@ require_once 'database.php';
 // Retrieve the product ID from the cookie
 $productId = $_COOKIE['product_id'];
 
-if (!is_null($_COOKIE['product_id'])) {
-    echo "Product not found.";
-    exit();
-};
-
 // Fetch other product details based on the product ID
 $sql = "SELECT * FROM instruments WHERE id = $productId";
 $result = $conn->query($sql);
@@ -52,53 +47,11 @@ $conn->close();
       <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Passion+One&display=swap" rel="stylesheet">
   </head>
   <body>
-      <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-shrink" id="mainNav">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">
-            HIBIKE
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="mynavbar">
-            <ul class="navbar-nav me-auto">
-              <li class="nav-item">
-                <a class="nav-link fw-bold" href="index.html">HOME</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link fw-bold dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">PRODUCTS</a>
-                <ul class="dropdown-menu rounded-0" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="products.html">Guitar</a></li>
-                  <li><a class="dropdown-item" href="products.html">Basses</a></li>
-                  <li><a class="dropdown-item" href="products.html">Keyboards</a></li>
-                  <li><a class="dropdown-item" href="products.html">Drums</a></li>
-                  <li><a class="dropdown-item" href="products.html">Brass & Woodwinds</a></li>
-                  <li><a class="dropdown-item" href="products.html">Amps & Speakers</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link fw-bold" href="#carousel-introduction">ABOUT</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link fw-bold" href="#service">CONTACT</a>
-              </li>
-            </ul>
-      
-            <div class="icons d-flex">
-              <a href="#">
-                <i class="large material-icons" style="font-size: 1.8rem">location_on</i>
-              </a>
-              <a href="#">
-                <i class="large material-icons" style="font-size: 1.8rem">shopping_basket</i>
-              </a>
-              <a href="#">
-                <i class="large material-icons" style="font-size: 1.8rem">assignment_ind</i>
-              </a>
-            </div>
-          </div>
-        </div>
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-white" id="mainNav">
+        
       </nav>
 
+      <!--Order Confirmation-->
       <div class="container-fluid mt-5 pt-5">
         <div class="section-label text-center py-5">
             <h3>CONFIRM YOUR SELECTION</h3>
@@ -107,7 +60,7 @@ $conn->close();
             </div>
         </div>
         <div class="row row-cols-auto g-3 p-2 d-flex justify-content-center">
-          <div class="col">
+          <div class="col-md-6">
             <table class="table">
                 <thead>
                     <tr>
@@ -126,6 +79,9 @@ $conn->close();
             </table> 
           </div>
 
+          
+
+          <!--Table-->
           <!--<div class="col-md-6">
             <div class="col">
               <div class="form-floating mb-1">
@@ -159,15 +115,18 @@ $conn->close();
                 <label for="floatingPassword">Address</label>
               </div>
             </div>
-          </div>
-        </div>-->
+          </div>-->
+        </div>
 
-        
+        <div class="container-fluid d-flex justify-content-center">
+          <a href="collect_info.php" class="btn btn-primary rounded-0" id="checkout-btn">
+            <div class="d-flex align-items-center text-white fw-bold py-2 px-5">
+              CHECK OUT
+              <i class="large material-icons" id="arrow-right" style="font-size: 1.5rem; color:rgb(255, 255, 255)">chevron_right</i></div>
+          </a>
+        </div>
 
-      <footer class="footer bg-white small text-center text-black-50"><div class="container px-4 px-lg-5">Copyright &copy; Your Website 2023</div></footer>
+      </div>
+    <footer class="footer bg-white small text-center text-black-50"><div class="container px-4 px-lg-5">Copyright &copy; Your Website 2023</div></footer>
   </body>
 </html>
-
-
-
-

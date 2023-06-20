@@ -34,8 +34,8 @@ $result = $conn->query($sql);
 
     <section id="products" class="pt-5 mt-5">
       <div class="label"></div>
-      <div class="container-fluid px-2 d-flex justify-content-center">
-        <div class="row pt-1 row-cols-auto d-flex justify-content-start">
+      <div class="container px-2 d-flex justify-content-center">
+        <div class="row pt-1 row-cols-auto d-flex justify-content-center">
           
         <?php
                 // LOOP TILL END OF DATA
@@ -79,7 +79,7 @@ $result = $conn->query($sql);
                 data: { product_id: productId },
                 success: function(response) {
                     // Redirect to the new webpage
-                    window.location.href = 'order_confirm.php';
+                    window.location.href = 'order_confirm.php?product_ids=' + productId;
                 }
                 });
             });
