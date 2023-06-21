@@ -1,5 +1,6 @@
 $(function(){
     $("#mainNav").load("../navbar.html");
+    $("footer").load("../footer.html");
   });
 
 window.addEventListener('DOMContentLoaded', event => {
