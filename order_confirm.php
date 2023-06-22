@@ -49,8 +49,8 @@
                 <tbody>
                     <tr>
                     <th scope="row"><p class="primary-med my-2">1</p></th>
-                    <td><p class="primary-med my-2"><?php echo $name;?></p></td>
-                    <td><p class="primary-med my-2">$<?php echo $price;?></p></td>
+                    <td><p class="primary-med my-2"><?php echo $productName;?></p></td>
+                    <td><p class="primary-med my-2">$<?php echo $productPrice;?></p></td>
                     </tr>
                 </tbody>
             </table> 

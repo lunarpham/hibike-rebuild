@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Insert the order details into the database
         $sql = "INSERT INTO orders (id, order_date, product_name, product_price, buyer_name, buyer_email, buyer_phone, buyer_region, buyer_city, buyer_address)
-                            VALUES ('$orderId', '$orderDate', '$name', '$price', '$buyer_name', '$buyer_email', '$buyer_phone', '$buyer_region', '$buyer_city', '$buyer_address')";
+                            VALUES ('$orderId', '$orderDate', '$productName', '$productPrice', '$buyer_name', '$buyer_email', '$buyer_phone', '$buyer_region', '$buyer_city', '$buyer_address')";
 
         if ($conn->query($sql) === true) {
             echo "Order placed successfully!";

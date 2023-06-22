@@ -3,17 +3,14 @@
 require_once 'database.php';
 
 // Retrieve the product ID from the cookie
-$productId = $_COOKIE['product_id'];
+$cookiesId = isset($_COOKIE['product_id']) ? $_COOKIE['product_id'] : '';
 
-if ($productId == 0) {
-    $id = "0";
-    $name = "N/A";
-    $type = "N/A";
-    $brand = "N/A";
-    $price = "0";
-    $image = "N/A";
+if (empty($cookiesId)) {
+    header('Location: ./products.php');
+    exit();
+
 } else {
-    $productRetrieve = "SELECT * FROM instruments WHERE id = $productId";
+    $productRetrieve = "SELECT * FROM instruments WHERE id = $cookiesId";
     $productResult = $conn->query($productRetrieve);
 
     // Check if the query was successful
@@ -21,12 +18,12 @@ if ($productId == 0) {
         $productDetails = $productResult->fetch_assoc();
 
         // Access the retrieved product details
-        $id = $productDetails['id'];
-        $name = $productDetails['name'];
-        $type = $productDetails['type'];
-        $brand = $productDetails['brand'];
-        $price = $productDetails['price'];
-        $image = $productDetails['image'];
+        $productId = $productDetails['id'];
+        $productName = $productDetails['name'];
+        $productType = $productDetails['type'];
+        $productBrand = $productDetails['brand'];
+        $productPrice = $productDetails['price'];
+        $productImage = $productDetails['image'];
 
     } else {
         echo "Product not found.";

@@ -10,7 +10,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <link rel="icon" href="logo/logo.webp">
-        <title><?php echo $name;?></title>
+        <title><?php echo $productName;?></title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
@@ -36,29 +36,29 @@
                         <ol class="breadcrumb">
                           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                           <li class="breadcrumb-item"><a href="products.php">Products</a></li>
-                          <li class="breadcrumb-item active" aria-current="page"><?php echo $name;?></li>
+                          <li class="breadcrumb-item active" aria-current="page"><?php echo $productName;?></li>
                         </ol>
                     </nav>
                 </div>
                 <div class="row row-col-auto">
                     <div class="col d-flex justify-content-center" id="productImage">
-                        <img src="<?php echo $image;?>" alt="" style="height:100%">
+                        <img src="<?php echo $productImage;?>" alt="" style="height:100%">
                     </div>
                     <div class="col px-3 m-2" id="productInfo">
-                        <h3 class="product-name fw-bold "><?php echo $name;?></h3>
+                        <h3 class="product-name fw-bold "><?php echo $productName;?></h3>
                         <hr class="style1">
                         <div class="row row-col-auto">
                             <div class="col">
                                 <p class="brand-label text-gray-50 primary-bold">Brand</p>
-                                <p class="brand-name text-gray-50 primary-bold"><?php echo $brand;?></p>
+                                <p class="brand-name text-gray-50 primary-bold"><?php echo $productBrand;?></p>
                             </div>
                             <div class="col">
                                 <p class="type-label primary-bold">Type</p>
-                                <p class="type-name primary-bold"><?php echo $type;?></p>
+                                <p class="type-name primary-bold"><?php echo $productType;?></p>
                             </div>
                         </div>
                         <hr class="style1">
-                        <h3 class="product-price fw-bold">$<?php echo $price;?></h3>
+                        <h3 class="product-price fw-bold">$<?php echo $productPrice;?></h3>
                         <a href="order_confirm.php" class="btn btn-primary rounded-0 buy-now py-3 fw-bold mt-3">BUY NOW</a>
                         <p class="type-label text-center mt-2 ">In stock and ready to ship</p>
                         <hr class="style1">
