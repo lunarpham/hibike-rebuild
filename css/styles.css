@@ -1,39 +1,44 @@
+/*Import Google Fonts*/
+
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Passion+One&display=swap');
 
 
-@font-face {
-  font-family: "Harmony OS Medium";
-  src: url(../font/HarmonyOS_Sans_SC_Medium.ttf);
+/*Style for body/html*/
+html, body {
+    overflow-x: hidden; /*Do not show if contents are overflow horizontally*/
+    scroll-margin: 0;
 }
 
-@font-face {
-  font-family: "Harmony OS Regular";
-  src: url(../font/HarmonyOS_Sans_SC_Light.ttf);
+html {
+  scroll-padding-top: calc(4.5rem - 1px);
 }
 
-@font-face {
-  font-family: "Harmony OS Bold";
-  src: url(../font/HarmonyOS_Sans_SC_Bold.ttf);
-}
-
-* {
-    font-family: "Harmony OS Medium", "Outfit", "PT Sans" -apple-system, system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
-    color: #5c5c5c;
-}
-
+/*Background*/
 body {
-  background-color: #D9D9D9;
+  background: url('../assests/bg_pattern.png');
+  letter-spacing: 0.01em;
+  font-family: "Plus Jakarta Sans", "Outfit";
+  color: #5c5c5c;
+  margin: 0;
+  padding: 0;
 }
 
+/*Class presets*/
 .primary-med {
-    font-family: "Harmony OS Medium";
+  font-family: "Plus Jakarta Sans";
+  font-weight: 500;
 }
 
 .primary-reg {
-    font-family: "Harmony OS Regular";
+  font-family: "Plus Jakarta Sans";
+  font-weight: 400;
 }
 
 .primary-bold {
-    font-family: "Harmony OS Bold";
+  font-family: "Plus Jakarta Sans";
+  font-weight: 700;
 }
 
 .secondary-med {
@@ -44,15 +49,67 @@ body {
     font-family: "PT Sans";
 }
 
-.card-text {
-    font-family: "Harmony OS Regular";
-    font-weight: 300;
+/*Modify Bootstrap's border-2 class*/
+.border-2 {
+  border-color: 2px solid #E14A77;
 }
 
+/*Border preset*/
+.border-pink {
+  /*border: 2px solid rgb(248, 117, 150, 0.6);*/
+  border: 2px solid rgb(248, 117, 150,0.8);
+}
+
+/*Transparent button*/
+.btn-transparent {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-transparent:hover {
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+  color: #000000;
+  transition: all 0.3s ease-in-out;
+}
+
+/*Modify Bootstrap's button class*/
+.btn {
+  box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
+  padding: 1.25rem 2rem;
+  font-size: 80%;
+  text-transform: uppercase;
+  border: 0;
+}
+
+.btn-custom {
+  color: rgb(248, 117, 150);
+  background-color: #FFF;
+  border: 2px solid rgb(248, 117, 150);
+  transition: all 0.1s ease-in-out;
+}
+
+.btn-custom:hover {
+  background-color: #48999F;
+  border: 2px solid rgb(255, 255, 255);
+  color:#fff
+}
+
+.btn-primary {
+  background-color: rgba(248, 117, 150);
+  border-color: rgba(248, 117, 150);
+  transition: all 0.1s ease-in-out;
+}
+
+
+/*Horizontal ruler*/
 hr.style1{
 	border-top: 1px solid #8c8b8b;
 }
 
+/*Text colors*/
 .text-azure {
   color: #48999F;
 }
@@ -65,36 +122,40 @@ hr.style1{
   color: #00000071;
 }
 
-.btn-custom {
-  background-color: #FFF;
+.divider-bottom {
+  justify-content: center;
+  background-color: rgb(248, 117, 150);
+  width:5%;
+  height: 2px;
 }
 
-.btn-custom:hover {
-  background-color: #48999F;
-  color:#fff
+/*Section wrapper*/
+.section-wrapper {
+  margin-top: 10rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
-html {
-    scroll-padding-top: calc(4.5rem - 1px);
-}
-
-body {
-  letter-spacing: 0.02em;
-}
+/*mainNav*/
+/*mainNav in homepage comes with prefix .nav-transparent*/
+/*mainNavs in other pages come with prefix .nav-default*/
+/*mainNav in collapse mode comes with .navbar-shrink*/
 
 #mainNav {
   min-height: 3.5rem;
   background-color: #fff;
 }
+
 #mainNav .navbar-toggler {
   font-size: 80%;
   padding: 0.75rem;
   color: #64a19d;
-  border: 1px solid #64a19d;
 }
+
 #mainNav .navbar-toggler:focus {
   outline: none;
 }
+
 #mainNav.nav-transparent .navbar-brand {
   font-weight: 700;
   padding: 0.9rem 0;
@@ -119,7 +180,6 @@ body {
   #mainNav.nav-transparent {
     padding-top: 0;
     padding-bottom: 0;
-    border-bottom: none;
     background-color: transparent;
     transition: background-color 0.3s ease-in-out;
   }
@@ -128,7 +188,6 @@ body {
     color:#444;
     padding-top: 0;
     padding-bottom: 0;
-    border-bottom: none;
     transition: background-color 0.3s ease-in-out;
   }
 
@@ -170,7 +229,6 @@ body {
   #mainNav.navbar-shrink .nav-link, #mainNav.nav-default .nav-link {
     color: #444;
     padding: 1.5rem 1.5rem 1.25rem;
-    border-bottom: 0.25rem solid transparent;
   }
 
   #mainNav.navbar-shrink .material-icons, #mainNav.nav-default .material-icons {
@@ -190,46 +248,36 @@ body {
 
 }
 
-.btn {
-  box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
-  padding: 1.25rem 2rem;
-  font-size: 80%;
-  text-transform: uppercase;
-  border: 0;
-}
-
-.carousel {
-  width: 100%;
-}
-
+/*Styles for header banner*/
 .masthead {
   position: relative;
   width: 100%;
   height: auto;
   min-height: 30rem;
   padding: 15rem 0;
-  background: linear-gradient(to bottom, rgba(65, 208, 208, 0.1) 5%, rgba(248, 117, 150, 0.5) 70%, rgba(248, 117, 150)), url("../assests/miku.jpg");
+  background: linear-gradient(to bottom, rgba(51, 51, 51, 0.6) 5%, rgba(51, 51, 51, 0.6) 70%), url("https://i.imgur.com/RjxVrAZ.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
 }
+
+/*Styles for header title - HIBIKE*/
 .masthead h1, .masthead .h1 {
-  font-family: "Viga";
+  color: #fff;
   font-size: 2.5rem;
   line-height: 2.5rem;
   letter-spacing: 0.8rem;
-  background: linear-gradient(rgba(255, 255, 255), rgba(65, 208, 255, 0.0));
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-          background-clip: text;
 }
+
+/*Styles for header subtitle - The way you sound it*/
 .masthead h2, .masthead .h2 {
+  color: #fff;
   max-width: 20rem;
   font-size: 1rem;
 }
 
-.text-center {
+.masthead .text-center {
   padding-top: 15rem;
 }
 
@@ -239,6 +287,7 @@ body {
     line-height: 4rem;
   }
 }
+
 @media (min-width: 992px) {
   .masthead {
     height: 100vh;
@@ -251,166 +300,257 @@ body {
   }
   .masthead h2, .masthead .h2 {
     max-width: 30rem;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
 }
 
-#carousel-introduction{
+/*Service card*/
+.service-card {
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  width: 100%;
+  height: 20rem;
+  color:#5c5c5c;
+  padding:2rem;
+  display: flex;
+}
+
+.service-card:hover {
+  transform: translateY(-15px);
+}
+
+.service-card .service-icon {
+  font-size: 7rem;
+  color:rgb(248, 117, 150);
+}
+
+@media only screen and (max-width: 990px) {
+  .service-card {
+    padding:1rem;
+    display: flex;
+    flex-direction: row;
+    text-align: start;
+    height: 12rem;
+  }
+
+  .service-card .service-icon {
+    align-self: center;
+    font-size: 5.5rem;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .service-card .service-icon {
+    font-size: 4rem;
+    padding: 0.5rem;
+  }
+
+  .service-card {
+    padding:0.3rem;
+    height: 9rem;
+  }
+}
+
+/*Intro card*/
+.intro-card {
+  padding: 2rem;
+  height: 10rem;
+}
+
+@media only screen and (max-width: 990px) {
+
+  .intro-card {
+    padding:1.8rem;
+    height: 15rem;
+  }
+
+}
+
+@media only screen and (max-width: 540px) {
+
+  .intro-card {
+    padding: 1rem;
+    height: 20rem;
+  }
+
+}
+
+/*Instrument slide*/
+.instrument-slide {
   width: 100%;
   height: 40rem;
-  background-image: linear-gradient(to bottom, rgb(248, 117, 150) 1%, rgba(248, 117, 150, 0.5) 35%, rgb(95, 223, 255)), url("../assests/kaori.jpg");
-  background-position:top;
+  font-size: 150rem;
+  color: #fff;
+  display: flex;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.carousel-label {
-  padding: 10rem 0rem 1rem 10rem
+.instrument-slide .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  text-align: end;
+  justify-content: center;
 }
 
-.carousel-item {
-  padding: 0 10rem;
+.instrument-slide#guitars {
+  background-image: url('https://i.imgur.com/dFG0fE9.jpg');
 }
 
-.carousel-item h5 {
+.instrument-slide#basses {
+  background-image: url('https://i.imgur.com/CbxuF8H.jpg');
+}
+
+.instrument-slide#drums {
+  background-image: url('https://i.imgur.com/G2veoNa.jpg');
+}
+
+.instrument-slide#keyboards {
+  background-image: url('https://i.imgur.com/rGYI2QK.jpg');
+}
+
+.instrument-slide#winds {
+  background-image: url('https://i.imgur.com/snYtVfA.jpg');
+}
+
+.instrument-slide#amps {
+  background-image: url('https://i.imgur.com/VNYNSG6.jpg');
+}
+
+.instrument-slide h1 {
+  font-size: 5rem;
+}
+
+.instrument-slide h4 {
+  font-size: 1.5rem;
+  width: 40%;
+}
+
+@media only screen and (max-width: 992px) {
+  .instrument-slide {
+    text-align: center;
+    background-position-x: 30%;
+  }
+
+  .instrument-slide .container {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .instrument-slide h1 {
+    font-size: 4.2rem;
+    text-shadow: 0 0 10px #000;
+  }
+  
+  .instrument-slide h4 {
+    font-size: 1.3rem;
+    text-shadow: 0 0 10px #000;
+    width: 70%;
+  }
+
+}
+
+@media only screen and (max-width: 540px) {
+
+  .instrument-slide {
+    background-position-y: 30%;
+  }
+
+  .instrument-slide h1 {
+    font-size: 3.5rem;
+  }
+  
+  .instrument-slide h4 {
+    font-size: 1.1rem;
+  }
+
+  .carousel-control-prev-icon {
+    visibility: hidden;
+  }
+
+  .carousel-control-next-icon {
+    visibility: hidden;
+  }
+}
+
+/*Discover instruments section*/
+#anime-banner {
+  height: 30rem;
+  background-image: url('https://i.imgur.com/4AUw4wS.jpg');
+  background-size:cover;
+  background-position: center;
+  display: flex;
+  align-items:center;
+  justify-content: right;
+}
+
+#anime-banner .container {
+  padding-left: 35vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: start;
   width: 70%;
 }
 
-@media (max-width: 992px) {
-  .text-white {
-    display: flex;
-    justify-content: center;
-    width: 80%;
-  }
-}
-
-@media (max-width: 992px) {
-
-  .carousel-label {
-    display: flex;
-    justify-content: center;
-    padding: 10rem 0rem 1rem 0rem
-  }
-
-  .carousel-item {
-    text-align: center;
-    padding: 0 2.2rem
-  }
-
-  .carousel-item h5 {
-    width: 100%;
-  }
-}
-
-@media (max-width: 520px) {
-  #carousel-introduction {
-    background-position: right;
-  }
-}
-
-@media (max-width: 414px) {
-
-  .carousel-label {
-    display: flex;
-    justify-content: center;
-    padding: 5rem 0rem 1rem 0rem
-  }
-
-  #carousel-introduction {
-    height: 30rem;
-  }
-}
-
-@media (max-width: 992px) {
-  .carousel-item h5 {
-    font-size: 1rem;
-  }
-
-}
-
-.divider-bottom {
-  justify-content: center;
-  background-color: rgb(248, 117, 150);
-  width:5%;
-  height: 2px;
-}
-
-#anime-banner {
-  height: 30rem;
-  background-image: url('../collections/banner.jpg');
-  background-size:cover;
-  background-position: center;
-  text-align: start;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 #anime-banner .text-right {
-  width: 100%;
-  padding: 5vh 2vh 1vw 50vw;
-  font-size: 4vw;
-  line-height: 3.5vw;
+  font-size: 4.5rem;
+  line-height: 3.5rem;
   font-weight: 600;
   color:rgb(53, 53, 53);
 }
 
-#anime-banner .btn {
-  width: fit-content;
-  margin: 0vw 2vw 1vw 50vw;
-  padding: 1vw 2vw;
-}
-
-@media (max-width: 992px) {
-  #anime-banner .text-right {
-    font-size: 5vw;
-    line-height: 4vw;
-  }
-  
-}
-
-@media (max-width: 640px) {
+@media only screen and (max-width:992px) {
   #anime-banner {
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0)30%, rgb(143,232,221) 90%), url("../collections/banner.jpg");
-    background-position: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 40%,rgba(255,255,255,1) 100%), url('https://i.imgur.com/4AUw4wS.jpg');
+    background-size:cover;
+    background-position-x: 10%;
   }
 
-  #anime-banner .text-right {
-    width: 100%;
+  #anime-banner .container {
+    padding-left: 0;
+    align-items: center;
     text-align: center;
-    padding: 40vw 2vw 0vw 2vw;
-    font-size: 2rem;
-    line-height: 1.6rem;
+  }  
+
+  #anime-banner .text-right {
+    font-size: 3rem;
+    line-height: 3rem;
     font-weight: 600;
     color:rgb(53, 53, 53);
-  }
-
-  #anime-banner .btn {
-    width: fit-content;
-    margin: 2vw 2vw 0vw 2vw;
-    padding: 1vw 2vw;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff;
   }
 }
 
-#arrow-right {
-  padding-left: 0.3rem;
-  transition: all 0.5s;
+/*Sponsor logos section*/
+.sponsor-logo img {
+  width: 18rem;
 }
 
-.btn:hover #arrow-right {
-  transform: translateX(0.3rem);
+@media only screen and (max-width:992px) {
+  .sponsor-logo img {
+    width: 15rem;
+  }
 }
 
-#service-card {
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
+@media only screen and (max-width:540px) {
+  .sponsor-logo img {
+    width: 12rem;
+  }
 }
 
-#service-card:hover {
-  transform: scale(1.1);
+@media only screen and (max-width:446px) {
+  .sponsor-logo img {
+    width: 10rem;
+  }
+}
+
+/*Product card for products.php*/
+.product-card {
+  width: 16rem;
 }
 
 .product-card .product-name {
@@ -431,6 +571,28 @@ body {
   width: 100%;
 }
 
+@media only screen and (max-width: 540px) {
+  .product-card {
+    width: 23rem;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .product-card img {
+    height: 10rem;
+    align-self: center;
+  }
+
+  .product-card .product-name {
+    flex-wrap: wrap;
+  }
+}
+
+/*Product details for product_details.php*/
+#productImage img {
+  width: 28rem;
+  height: 28rem;
+}
 
 #productDetails .brand-label {
   padding: 0;
@@ -469,38 +631,63 @@ body {
   width: 100%;
 }
 
-
-#products .container-fluid .product-box, #products .container-sm .product-box, #products .container-md .product-box, #products .container-lg .product-box, #products .container-xl .product-box, #products .container-xxl .product-box {
-  position: relative;
-  display: block;
-}
-#products .container-fluid .product-box .product-box-caption, #products .container-sm .product-box .product-box-caption, #products .container-md .product-box .product-box-caption, #products .container-lg .product-box .product-box-caption, #products .container-xl .product-box .product-box-caption, #products .container-xxl .product-box .product-box-caption {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  bottom: 0;
-  text-align: center;
-  opacity: 0;
-  color: #fff;
-  background: rgba(248, 117, 150, 0.767);
-  transition: opacity 0.25s ease;
-  text-align: center;
-}
-
-#products .container-fluid .product-box .product-box-caption .type-name, #products .container-sm .product-box .product-box-caption .type-name, #products .container-md .product-box .product-box-caption .type-name, #products .container-lg .product-box .product-box-caption .type-name, #products .container-xl .product-box .product-box-caption .type-name, #products .container-xxl .product-box .product-box-caption .type-name {
-  font-size: 1.2rem;
-}
-#products .container-fluid .product-box:hover .product-box-caption, #products .container-sm .product-box:hover .product-box-caption, #products .container-md .product-box:hover .product-box-caption, #products .container-lg .product-box:hover .product-box-caption, #products .container-xl .product-box:hover .product-box-caption, #products .container-xxl .product-box:hover .product-box-caption {
-  opacity: 1;
-}
-
 .footer {
   margin-top: 10rem; 
   padding: 5rem 0;
   background-color:#444444;
 }
-  
+
+
+@media only screen and (max-width: 540px) {
+
+  #service, #introduction {
+    padding: 0rem 1rem;
+  }
+
+  #order-confirm {
+    padding: 0 1rem;
+  }
+
+  #info-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section-label {
+    padding:1.5rem;
+  }
+
+  #productImage img {
+    width: 20rem;
+    height: 20rem;
+  }
+}
+
+
+#collection-page {
+  background-image: url('../assests/image2.jpg');
+  background-size: cover;
+  height: 50rem;
+}
+
+#collection-body {
+  background: black;
+  color: white;
+}
+
+#storeLocations {
+  height: 27rem;
+}
+
+#storeLocations::-webkit-scrollbar {
+  display: none;
+}
+
+#map-container {
+  height: 27rem;
+  width: 100%;
+}
+
+#admin-body {
+  background: white;
+}

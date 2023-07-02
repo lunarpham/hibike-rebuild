@@ -17,6 +17,8 @@ if (empty($cookiesId)) {
     if ($productResult && $productResult->num_rows > 0) {
         $productDetails = $productResult->fetch_assoc();
 
+        $productDetails['price'] = ($productDetails['price'] - floor($productDetails['price']) == 0) ? intval($productDetails['price']) : $productDetails['price'];
+
         // Access the retrieved product details
         $productId = $productDetails['id'];
         $productName = $productDetails['name'];
