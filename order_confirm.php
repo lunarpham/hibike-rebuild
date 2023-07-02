@@ -23,7 +23,7 @@
         integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
         crossorigin="anonymous"></script>
       <link href="css/styles.css" rel="stylesheet">
-      <script src="js/scripts.js" defer="sync"></script>
+      <script src="js/scripts.js"></script>
   </head>
   <body>
       <nav class="navbar navbar-expand-lg navbar-light fixed-top nav-default" id="mainNav">

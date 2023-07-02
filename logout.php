@@ -4,4 +4,4 @@ session_start();
 session_unset();
 session_destroy();
 
-header("Location: login_form.php");
+header("Location: index.html");

@@ -10,6 +10,7 @@ if (isset($_SESSION['ID']) && isset($_SESSION['Username'])) {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="logo/logo.webp">
   <title>Admin Panel</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,186 +23,42 @@ if (isset($_SESSION['ID']) && isset($_SESSION['Username'])) {
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <link href="css/styles.css" rel="stylesheet">
-
-
-  <style>
-    .small-image {
-      width: 25%;
-    }
-
-    .error-message {
-      color: red;
-      font-size: 12px;
-      margin-left: 5px;
-    }
-
-    #adminNav {
-      min-height: 3.5rem;
-      background-color: #fff;
-    }
-     .navbar-toggler {
-      font-size: 80%;
-      padding: 0.75rem;
-      color: #64a19d;
-      border: 1px solid #64a19d;
-    }
-     .navbar-toggler:focus {
-      outline: none;
-    }
-    .nav-transparent .navbar-brand {
-      font-weight: 700;
-      padding: 0.9rem 0;
-    }
-    
-    .nav-default .navbar-brand {
-      font-weight: 700;
-      padding: 0.9rem 0;
-    }
-    
-     .navbar-nav .nav-item:hover {
-      color: fade(#fff, 80%);
-      outline: none;
-      background-color: transparent;
-    }
-     .navbar-nav .nav-item:active,  .navbar-nav .nav-item:focus {
-      outline: none;
-      background-color: transparent;
-    }
-    
-    @media (min-width: 992px) {
-      .nav-transparent {
-        padding-top: 0;
-        padding-bottom: 0;
-        border-bottom: none;
-        background-color: transparent;
-        transition: background-color 0.3s ease-in-out;
-      }
-      
-      .nav-default {
-        color:#444;
-        padding-top: 0;
-        padding-bottom: 0;
-        border-bottom: none;
-        transition: background-color 0.3s ease-in-out;
-      }
-    
-      .nav-default .navbar-brand {
-        padding: 0rem 0.5rem;
-        font-size: 150%;
-        color: rgb(248, 117, 150);
-      }
-    
-      .nav-transparent .navbar-brand {
-        padding: 0rem 0.5rem;
-        font-size: 150%;
-        color: rgba(255, 255, 255, 0.75);
-      }
-    
-      .nav-transparent .nav-link {
-        transition: none;
-        padding: 2rem 1.5rem;
-        color: rgba(255, 255, 255, 0.5);
-      }
-    
-      .nav-transparent .material-icons {
-        color: rgba(255, 255, 255, 0.5);
-        padding: 0.5rem
-      }
-    
-      .nav-transparent .nav-link:hover {
-        color: rgba(255, 255, 255, 0.75);
-      }
-    
-      .navbar-shrink {
-        background-color: #fff;
-      }
-    
-      .navbar-shrink .navbar-brand, .nav-default .navbar-brand {
-        font-size: 130%;
-        color: rgb(248, 117, 150);
-      }
-      .navbar-shrink .nav-link, .nav-default .nav-link {
-        color: #444;
-        padding: 1.5rem 1.5rem 1.25rem;
-        border-bottom: 0.25rem solid transparent;
-      }
-    
-      .navbar-shrink .material-icons, .nav-default .material-icons {
-        color: #444;
-        padding: 0.5rem
-      }
-    
-      .navbar-shrink .nav-link:hover, .nav-default .nav-link:hover {
-        color: #ffffff;
-        background-color: #48999F;
-      }
-    
-      .navbar-shrink .nav-link:active, .nav-default .nav-link:active {
-        color: #ffffff;
-        background-color: #48999F;
-      }
-    
-    }
-  </style>
 </head>
 
-<body id="admin-body">
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top nav-default" id="adminNav">
-    <div class="container secondary-med px-lg-3 d-flex align-text-center">
-      <a class="navbar-brand" href="index.html">
-        HIBIKE
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="mynavbar">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item">
-            <a class="nav-link fw-bold" href="index.html">HOME</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link fw-bold dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">PRODUCTS</a>
-            <ul class="dropdown-menu border-0 bg-white" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="products.php">ALL PRODUCTS</a></li>
-              <li><a class="dropdown-item" href="products.php">COLLECTIONS</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link fw-bold" href="about.html">ABOUT</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link fw-bold" href="contact.html">CONTACT</a>
-          </li>
-        </ul>
-
-        <div class="icons d-flex align-items-center">
-          <p class="primary-med">Current admin: <?php echo $_SESSION['Displayname'];?></p>
-          <a href="logout.php">Logout</a>
-        </div>
+<body id="admin-body" class="pt-4">
+  <nav class="navbar bg-black px-lg-5 py-3 fixed-top">
+    <div class="icons d-flex justify-content-center flex-column mx-2">
+        <p class="primary-med text-white mb-0">Current admin</p>
+        <p class="primary-med mb-0 mt-1 p-1 bg-success rounded-3 text-center text-white"><?php echo $_SESSION['Displayname'];?></p>
       </div>
-    </div>
+      <div class="icons d-flex align-items-center">
+        <a href="index.html" class="btn btn-secondary p-3 primary-bold mx-2">Back to homepage</a>
+        <a href="logout.php" class="btn btn-danger p-3 primary-bold">Logout</a>
+      </div>
   </nav>
 
-  <div class="container-fluid px-5  pt-5 mt-5">
+  
+  <div class="container-fluid px-5 pt-5 mt-5">
     <div class="row">
       <!-- Tab Menu -->
       <div class="col-md-2">
         <ul class="nav nav-pills flex-column" id="myTab" role="tablist">
           <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="order-tab" data-bs-toggle="tab" data-bs-target="#order" type="button"
-              role="tab" aria-controls="order" aria-selected="true">Order Tracking</button>
+            <button class="nav-link active" id="product-tab" data-bs-toggle="tab" data-bs-target="#product" type="button"
+              role="tab" aria-controls="product" aria-selected="true">Product Listing</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="product-tab" data-bs-toggle="tab" data-bs-target="#product" type="button"
-              role="tab" aria-controls="product" aria-selected="false">Product Listing</button>
+            <button class="nav-link" id="order-tab" data-bs-toggle="tab" data-bs-target="#order" type="button"
+              role="tab" aria-controls="order" aria-selected="false">Order Tracking</button>
           </li>
+          
         </ul>
       </div>
       <!-- Content Board -->
       <div class="col-md-10">
         <div class="tab-content" id="myTabContent">
           <!-- Order tracking -->
-          <div class="tab-pane fade show active" id="order" role="tabpanel" aria-labelledby="order-tab">
+          <div class="tab-pane fade" id="order" role="tabpanel" aria-labelledby="order-tab">
             <div class="container">
               <h1>Order Details</h1>
               <div class="row mb-3">
@@ -233,7 +90,7 @@ if (isset($_SESSION['ID']) && isset($_SESSION['Username'])) {
             </div>
           </div>
           <!-- Product listing -->
-          <div class="tab-pane fade" id="product" role="tabpanel" aria-labelledby="product-tab">
+          <div class="tab-pane fade show active" id="product" role="tabpanel" aria-labelledby="product-tab">
             <div class="container">
               <h1>Shop Inventory</h1>
               <div class="row mb-3">
@@ -258,6 +115,7 @@ if (isset($_SESSION['ID']) && isset($_SESSION['Username'])) {
                     <th>Brand</th>
                     <th>Purchases</th>
                     <th>Image</th>
+                    <th>Description</th>
                   </tr>
                 </thead>
                 <tbody id="productTable">
@@ -361,7 +219,8 @@ if (isset($_SESSION['ID']) && isset($_SESSION['Username'])) {
         row.append($('<td>').text(product.brand));
         row.append($('<td>').text(product.purchases));
         row.append($('<td>').html('<img src="' + product.image +
-          '" alt="Product Image" class="img-fluid small-image">'));
+          '" alt="Product Image" class="img-fluid large-image">'));
+        row.append($('<td>').text(product.description));
         // Add Edit button
         var editButton = $('<button>').addClass('btn btn-primary btn-sm edit-button').text('Edit');
         editButton.attr('data-item-id', product.id);
@@ -382,12 +241,14 @@ if (isset($_SESSION['ID']) && isset($_SESSION['Username'])) {
         var itemPrice = row[0].cells[1].innerText;
         var itemType = row[0].cells[2].innerText;
         var itemBrand = row[0].cells[3].innerText;
+        var itemDescription = row[0].cells[6].innerText;
         var itemImage = row[0].cells[5].querySelector('img').src;
         $('#itemNameEdit').val(itemName);
         $('#itemPriceEdit').val(itemPrice);
         $('#itemTypeEdit').val(itemType);
         $('#itemBrandEdit').val(itemBrand);
         $('#itemImageEdit').val(itemImage);
+        $('#itemDescriptionEdit').val(itemDescription);
       }
       // Handle click events for Edit buttons
       $('.edit-button').on('click', function () {

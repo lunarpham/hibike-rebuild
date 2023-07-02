@@ -2,10 +2,10 @@
     require_once('database.php');
 
     // Fetch items from the shop table
-    $query = "SELECT i.id, i.name, i.price, i.type, i.brand, COUNT(o.id) AS purchases, i.image
+    $query = "SELECT i.id, i.name, i.price, i.type, i.brand, COUNT(o.id) AS purchases, i.image, i.description
     FROM instruments AS i
     LEFT JOIN orders AS o ON i.name = o.product_name
-    GROUP BY i.id, i.name, i.price, i.type, i.brand, i.image";
+    GROUP BY i.id, i.name, i.price, i.type, i.brand, i.image, i.description";
     $result = $conn->query($query);
 
     // Fetch results and store in a PHP array
