@@ -254,19 +254,65 @@
 
   <script>
     $(document).ready(function() {
+      $('#send_contact').click(function(e) {
+        e.preventDefault(); // Prevent the form from submitting and refreshing the page
+    
+        // Retrieve form field values
+        var submit_Name = $("#submitName").val();
+        var submit_Email = $("#submitEmail").val();
+        var submit_Subject = $("#submitSubject").val();
+        var submit_Message = $("#submitMessage").val();
+    
+        // Perform form validation
+        var isValid = true;
+    
+        if (submit_Name === "") {
+          isValid = false;
+          $("#submitName").addClass("is-invalid");
+        } else {
+          $("#submitName").removeClass("is-invalid");
+        }
+    
+        if (submit_Email === "") {
+          isValid = false;
+          $("#submitEmail").addClass("is-invalid");
+        } else {
+          $("#submitEmail").removeClass("is-invalid");
+        }
+    
+        if (submit_Subject === "") {
+          isValid = false;
+          $("#submitSubject").addClass("is-invalid");
+        } else {
+          $("#submitSubject").removeClass("is-invalid");
+        }
+    
+        if (submit_Message === "") {
+          isValid = false;
+          $("#submitMessage").addClass("is-invalid");
+        } else {
+          $("#submitMessage").removeClass("is-invalid");
+        }
+    
+        // If form is valid, log the submitted information
+        if (isValid) {
+          console.log("Submitted Information:");
+          console.log("Full Name: " + submit_Name);
+          console.log("Email: " + submit_Email);
+          console.log("Subject: " + submit_Subject);
+          console.log("Message: " + submit_Message);
 
-      var submit_Name = $("#submitName").val();
-      var submit_Email = $("#submitEmail").val();
-      var submit_Subject = $("#submitSubject").val();
-      var submit_Message = $("#submitMessage").val();
-
-      $('#send_contact').click(function(){
-        console.log(submit_Name);
-        console.log(submit_Email);
-        console.log(submit_Subject);
-        console.log(submit_Message);
+    
+          // Reset the form fields
+          $("#submitName").val("");
+          $("#submitEmail").val("");
+          $("#submitSubject").val("");
+          $("#submitMessage").val("");
+        }
       });
     });
+    
+    
   </script>
 </body>
 

@@ -5,6 +5,8 @@ require_once('actions/database.php');
 // get some data from the DB
 $sql = "SELECT * FROM instruments";
 $result = $conn->query($sql);
+
+
 ?>
 
 <!DOCTYPE html>
@@ -68,6 +70,7 @@ $result = $conn->query($sql);
 
           <?php
             }
+
           ?>
 
         </div>
