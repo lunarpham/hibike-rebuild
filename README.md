@@ -8,7 +8,9 @@ The website is made for a fictional instrument store named Hibike that is set in
 
 ## Languages used in this project: 
 HTML, CSS/Bootstrap and JS/jQuery for front-end
+
 PHP for back-end
+
 MySQL for database
 
 ## Project member
