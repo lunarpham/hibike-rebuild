@@ -15,13 +15,13 @@ MySQL for database
 
 ## Project member
 
-Phan Van Quy (21020003)
+[Phan Nhat Quang](https://github.com/Quang1129) (21040005)
 
-Nguyen Tran Xuan Tri (21020006)
+[Phan Van Quy](https://github.com/QuaoQuy) (21020003)
 
-Phan Nhat Quang (21040005)
+[Nguyen Tran Xuan Tri](https://github.com/VOIDkuugeki) (21020006)
 
-Pham Duy Truong (21020014)
+[Pham Duy Truong](https://github.com/lunarpham) (21020014)
 
 Truong Van Duc
 
